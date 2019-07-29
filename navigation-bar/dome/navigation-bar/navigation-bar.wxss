@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "iconfont";
+  src:url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAKYAAsAAAAABjwAAAJMAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcApIXwE2AiQDCAsGAAQgBYRtBzAbhQUR1Ys7sq8OzMPMw3vK4B67h2Pxl4knGsXeRjGJSd/nePhvv//tMzP3/fmIePq8xKK7R9VE+hERCRUSIYolWB1v4qvbTZ5V78U5q47ywkRdjuTd2bMuJO2AsvxcbfVdkFLlrx72fOLe6Z9AH6T1gHLci8aaNKkLqIsDKcC9sE1WJJE3jF3wAs8TGGCKrlh8WL1ZVdjTAnEk379TLfgVhaWq0GlYW8Q1jZrOp5e4Gn0/vpsTlaTJ7Ir1+5bsMf8TTkY+1h6zJSAECGhzg4wuCrG5Mb5WFozLBsSLGRyrNPhE2wY2cVSzYH+dXTwITIKSZ5J6skdNJXisvkZg3KSHESNcGEN3jo/1dy/ePzbK7b197N6LqaPu/9vf/f//3vdr091R/o5/x3zQfkx/8loFgulLHr+ddV7A60YRb/uxGOak7sMR/AvpwJZiyG1rKpq0sTMZcY6qAQaghd0jfJhqGH3idKhGT3D2mJwhq2aRhe2iMdBcdFTzMMBsyzYPNNJRWZRe9DkNEIZ5gGSIh8iGeUUW9j0aY/xEx7DIGAC9xWLPuWXksy2jFnRgPpDbtiHXLrO49IT+UWnOyyPeDXnIQ5BGSTl1xAZ5iQXD02ciBMRtDQdwGVZVCx23BVqJgki3imNqelNk21rNbDGkCeQA4wPkrFaDgu5iVvn8CfIeKhp3NNXFbxAb5IODVCQZQB41zaCmR7lm8ORlhCCAsFYNHMAoVKm0QNc8qoAsEQkTop2V2GlHQzXR9rr67/bAALYxhTMsG+3TTXjkSgEAAA==') format('woff2');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fanhui:before {
+  content: "\e605";
+}
+.icon-fanhui{
+  font-size:42rpx;
+  font-weight:bold;
+  line-height: 1em;
+  padding:18rpx 15rpx 10rpx 15rpx;
+  color:#000;
+}
+.container{
+  width:100%;
+  position:relative;
+  /* 保证导航始终在最上面 */
+  z-index:99999;
+}
+.main_nav{
+  width:100%;
+}
+.main_nav_fixed{
+  position:fixed;
+  top:0;
+  left:0;
+}
+.navigator_placeholder{
+  width:100%;
+}
+.status_bar{
+  width:100%;
+}
+.navigator_main{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  position:relative;
+}
+.back{
+  display:flex;
+  align-items: center;
+  position:absolute;
+  left:10rpx;
+  top:50%;
+  transform:translateY(-50%);
+}
+.back_navigator{
+  display:flex;
+  align-items: center;
+}
+.back_img{
+  width:24rpx;
+  height:34rpx;
+  padding:10rpx 20rpx;
+}
+.title{
+  font-size:38rpx;
+  font-weight:bold;
+  color:#000;
+}
+.app_navigator{
+  display:flex;
+  align-items: center;
+}
+.app_title{
+  font-size:34rpx;
+  font-weight:bold;
+  line-height: 1em;
+  color:#000;
+}
+.navigator_hover{
+  opacity:0.78;
+}

@@ -1,0 +1,7 @@
+<navigation-bar
+  title="我是标题"
+  titleBgColor="#0DA1EC"
+  isShowBack="{{true}}"
+  isFixed="{{true}}"
+></navigation-bar>
+<view class="container">这里小程序的正文内容这里小程序的正文内容这里小程序的正文内容这里小程序的正文内容这里小程序的正文内容这里小程序的正文内容这里小程序的正文内容</view>
