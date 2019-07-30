@@ -24,4 +24,4 @@
 * show,用于显示引导，默认就是显示的
 * hide,用于隐藏引导区域
 
-[点击此处使用查看演示示例](https://developers.weixin.qq.com/s/pPqMrfms7RaL)
+[点击此处使用小程序工具查看演示示例](https://developers.weixin.qq.com/s/XrKnnfml7PaF)
