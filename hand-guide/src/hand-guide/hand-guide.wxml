@@ -1,0 +1,4 @@
+<view class="hand_tips" bind:tap="handTipsClick">
+  <image class="common_hand_circle" src="./assets/hand_circle.png" />
+  <image class="common_hand" src="./assets/hand.png" />
+</view>

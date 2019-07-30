@@ -17,6 +17,13 @@
   }
 }
 ```
+3. 在使用的页面最开始插入组件，配置你想要的属性实现想要的效果，推荐用法：把页面主内容另起一个和导航一样的view，这样view里面的元素能尽量避免受外navigation-bar的影响，对于fixed定位的就要把navigation-bar的高度考虑在内，组件有暴露方法获取当前navigation-bar的高度用于外面元素的适配。
+``` json
+<navigation-bar
+  title="我是标题"
+  titleBgColor="#0DA1EC"
+></navigation-bar>
+```
 ## 配置说明
 **此导航栏有如下配置选项:**
 

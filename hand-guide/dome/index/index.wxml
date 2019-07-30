@@ -1,0 +1,12 @@
+<view class="container">
+  <text class="tips">Hello,小程序</text>
+  <text class="tips">默认手指会遮挡按钮，如果想事件穿透，手指不捕捉事件，可以给手指组件加上<text class="tips_stress">css:pointer-events:none;</text>还有另一种方法就是监听手指向外暴露的点击事件handClick来做逻辑，推荐第一种，第二种手指的区域有时会大过按钮点击区域误发误点</text>
+  <view class="click_me">
+    <button type="primary" size="default" bind:tap="clickMe">透过手指也能点我</button>
+    <hand-guide class="hand_guide"></hand-guide>
+  </view>
+  <view class="click_me">
+    <button type="primary" size="default" bind:tap="clickMe0">点手指和我一样的</button>
+    <hand-guide class="hand_guide0" bind:handClick="clickMe0"></hand-guide>
+  </view>
+</view>

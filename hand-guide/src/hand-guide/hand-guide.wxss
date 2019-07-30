@@ -1,0 +1,50 @@
+.hand_tips{
+  width:168rpx;
+  height:168rpx;
+  position:relative;
+}
+@keyframes circleAni {
+  0%{
+    transform:scale(0);
+    opacity:0;
+  }
+  50%{
+    transform:scale(0);
+    opacity:0;
+  }
+  80%{
+    transform:scale(1);
+    opacity:1;
+  }
+  100%{
+    transform:scale(1.8);
+    opacity:0;
+  }
+}
+@keyframes handAni {
+  0%{
+    transform:scale(1);
+  }
+  25%{
+    transform:scale(0.9);
+  }
+  50%{
+    transform:scale(1);
+  }
+  100%{
+    transform:scale(1);
+  }
+}
+.common_hand_circle{
+  width:78rpx;
+  height:78rpx;
+  animation:circleAni 0.8s linear 0s infinite;
+}
+.common_hand{
+  width:127rpx;
+  height:138rpx;
+  position:absolute;
+  top:29rpx;
+  left:29rpx;
+  animation:handAni 0.8s linear 0s infinite;
+}

@@ -1,0 +1,21 @@
+@import "../common.wxss";
+.container{
+  position:relative;
+}
+.click_me{
+  width:390rpx;
+  height:260rpx;
+  position:relative;
+}
+.hand_guide{
+  position:absolute;
+  top:20rpx;
+  left:50%;
+  /* 这个用于手指事件穿透 */
+  pointer-events:none;
+}
+.hand_guide0{
+  position:absolute;
+  top:20rpx;
+  left:50%;
+}
