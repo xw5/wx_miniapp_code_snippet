@@ -1,0 +1,24 @@
+<navigation-bar
+  id="myNavigation"
+  title="我能自由变化"
+  titleBgColor="#FE5442"
+  isShowBack="{{true}}"
+  isFixed="{{true}}"
+></navigation-bar>
+<view class="container">
+  <text>这是一个展示样式随意变化的navigation-bar演示</text>
+  <view
+    class="page_link"
+    hover-class="navigator-hover"
+    bind:tap="changeColor"
+  >
+    我要黑色、白字的
+  </view>
+  <view
+    class="page_link"
+    hover-class="navigator-hover"
+    bind:tap="changeBg"
+  >
+    背影来个天空蓝
+  </view>
+</view>

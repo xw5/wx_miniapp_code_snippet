@@ -1,7 +1,40 @@
 <navigation-bar
   title="我是标题"
   titleBgColor="#0DA1EC"
-  isShowBack="{{true}}"
-  isFixed="{{true}}"
 ></navigation-bar>
-<view class="container">这里小程序的正文内容这里小程序的正文内容这里小程序的正文内容这里小程序的正文内容这里小程序的正文内容这里小程序的正文内容这里小程序的正文内容</view>
+<view class="container">
+  <text class="hello">Hello,小程序</text>
+  <navigator
+    class="page_link"
+    url="/hasback/hasback"
+    hover-class="navigator-hover"
+    open-type="navigate"
+  >
+    带返回功能的示例
+  </navigator>
+  <navigator
+    class="page_link"
+    url="/navigatorapp/navigatorapp"
+    hover-class="navigator-hover"
+    open-type="navigate"
+  >
+    返回跳转小程序示例
+  </navigator>
+  <navigator
+    class="page_link"
+    url="/catchback/catchback"
+    hover-class="navigator-hover"
+    open-type="navigate"
+  >
+    截持返回功能的示例
+  </navigator>
+  <navigator
+    class="page_link"
+    url="/style/style"
+    hover-class="navigator-hover"
+    open-type="navigate"
+  >
+    自由定义样式
+  </navigator>
+    
+</view>

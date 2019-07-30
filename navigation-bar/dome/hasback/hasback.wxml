@@ -1,0 +1,9 @@
+<navigation-bar
+  title="我能返回"
+  titleBgColor="#FE5442"
+  isShowBack="{{true}}"
+  isFixed="{{true}}"
+></navigation-bar>
+<view class="container">
+  <text>这是一个有返回功能的navigation-bar演示</text>
+</view>

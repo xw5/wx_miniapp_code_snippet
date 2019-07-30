@@ -1,0 +1,28 @@
+
+<view class="container">
+  <view class="main_nav {{isFixed ? 'main_nav_fixed' : ''}}" style="height:{{navBarHeight}}px">
+    <view class="navigator_main" style="padding-top:{{statusBarHeight}}px;height:88rpx;background-color:{{setTitleBgColor ? setTitleBgColor : titleBgColor}}">
+      <view class="back" style="margin-top:{{statusBarHeight / 2}}px;">
+        <view
+          class="back_navigator"
+          wx:if="{{isShowBack}}"
+          hover-class="navigator_hover"
+          bind:tap="backAction"
+        >
+          <text class="iconfont icon-fanhui" style="color:{{setBackColor ? setBackColor : backColor}}"></text>
+        </view>
+        <view
+          wx:if="{{linkConfig}}"
+          class="app_navigator"
+          hover-class="navigator_hover"
+          bind:tap="backAction"
+        >
+          <text class="iconfont icon-fanhui" style="color:{{setBackColor ? setBackColor : backColor}}"></text>
+          <text class="app_title" style="color:{{backColor}}">{{linkConfig.title}}</text>
+        </view>
+      </view>
+      <text class="title" style="color:{{setTitleColor ? setTitleColor : titleColor}}">{{title}}</text>
+    </view>
+  </view>
+  <view wx:if="{{isFixed}}" class="navigator_placeholder" style="height:{{navBarHeight-2}}px"></view>
+</view>

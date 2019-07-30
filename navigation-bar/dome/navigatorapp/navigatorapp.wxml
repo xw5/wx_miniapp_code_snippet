@@ -1,0 +1,16 @@
+<navigation-bar
+  title="支持跳小程序"
+  titleBgColor="#FE5442"
+  isFixed="{{true}}"
+  linkConfig="{{titleBarLinkConfig}}"
+></navigation-bar>
+<view class="container">
+  <text class="tips">这是一个返回键支持配置跳转小程序的示例</text>
+  <navigator
+    class="page_link"
+    hover-class="navigator-hover"
+    open-type="navigateBack"
+  >
+   返回
+  </navigator>
+</view>

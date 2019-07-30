@@ -21,7 +21,6 @@
 **此导航栏有如下配置选项:**
 
 * titleBgColor:     导航栏背景色,默认为白色#fff
-* statusBgColor:    状态栏背景色，默认为空，当没有配置该项参数时，默认会取titleBgColor的值
 * titleColor:       标题栏字体颜色，默认为黑
 * title:            标题栏内容，默认为空
 * isShowBack：      是否要展示返回按钮
@@ -40,4 +39,4 @@
 
 * getHeight,通过此函数能够获取当前navigationBar的高度，用于外界元素的适配使用
 
-[点击此处使用查看演示示例](https://developers.weixin.qq.com/s/wjiFiemk7jaA)
+[点击此处使用查看演示示例](https://developers.weixin.qq.com/s/pPqMrfms7RaL)

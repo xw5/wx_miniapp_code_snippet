@@ -1,0 +1,4 @@
+@import "../common.wxss";
+.container{
+  background-color:#FE5442;
+}

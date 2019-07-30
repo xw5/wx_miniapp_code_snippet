@@ -1,6 +1,1 @@
-.container {
-  height:1689rpx;
-  padding:30rpx;
-  font-size:30rpx;
-  background-color:#0DA1EC;
-}
+@import "../common.wxss";

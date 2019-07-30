@@ -1,6 +1,8 @@
 {
   "pages": [
-    "index/index"
+    "index/index",
+    "hasback/hasback",
+    "catchback/catchback"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -9,6 +11,9 @@
   },
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
-    "navigation-bar": "./navigation-bar/navigation-bar"
-  }
+    "navigation-bar": "./src/navigation-bar/navigation-bar"
+  },
+  "navigateToMiniProgramAppIdList":[
+    "wx5bc4052da6969b58"
+  ]
 }

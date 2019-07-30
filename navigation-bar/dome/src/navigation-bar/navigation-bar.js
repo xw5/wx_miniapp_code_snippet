@@ -1,9 +1,5 @@
 Component({
   properties: {
-    statusBgColor: { // 状态栏背景色
-      type: String,
-      value: ""
-    },
     titleBgColor: { // 标题栏背景色
       type: String,
       value: "#fff"
@@ -40,33 +36,55 @@ Component({
 
   data: {
     statusBarHeight: 0,
-    navBarHeight: 0
+    navBarHeight: 0,
+    setTitleBgColor: '', // js设置过来的值,title背影颜色
+    setTitleColor: '', // js设置过来的值,title文字颜色
+    setBackColor: '' // js设置过来的值,返回键颜色
   },
 
   methods: {
     getHeight: function() {
       return this.data.navBarHeight
     },
-    backAction: function(e) {
-      let {linkConfig} = this.properties;
-      this.triggerEvent("backAction", linkConfig);
-    },
-    navigatorApp: function(e) {
-      let self = this;
-      let {linkConfig} = this.properties;
-      this.triggerEvent("startNavigate");
-      wx.navigateToMiniProgram({
-        appId: linkConfig.appId,
-        path: linkConfig.path ? linkConfig.path : '',
-        extraData: linkConfig.extraData ? linkConfig.extraData : '',
-        envVersion: "release",
-        success: function() {
-          self.triggerEvent("navigateOk");
-        },
-        fail: function() {
-          self.triggerEvent("navigateFail");
-        }
+    setTitleBgColor: function(color) {
+      this.setData({
+        setTitleBgColor: color
       });
+    },
+    setTitleColor: function(color) {
+      this.setData({
+        setTitleColor: color
+      });
+    },
+    setBackColor: function(color) {
+      this.setData({
+        setBackColor: color
+      });
+    },
+    backAction: function(e) {
+      let self = this;
+      let {linkConfig, isCatchBack} = this.properties;
+      if (isCatchBack) {
+        this.triggerEvent("backAction", linkConfig ? linkConfig : null);
+      } else {
+        if (linkConfig && linkConfig.appId) {
+          this.triggerEvent("startNavigate");
+          wx.navigateToMiniProgram({
+            appId: linkConfig.appId,
+            path: linkConfig.path ? linkConfig.path : '',
+            extraData: linkConfig.extraData ? linkConfig.extraData : '',
+            envVersion: "release",
+            success: function() {
+              self.triggerEvent("navigateOk");
+            },
+            fail: function() {
+              self.triggerEvent("navigateFail");
+            }
+          });
+        } else {
+          wx.navigateBack();
+        }
+      }
     }
   },
 
@@ -77,6 +95,7 @@ Component({
         statusBarHeight: systemInfo.statusBarHeight,
         navBarHeight: systemInfo.statusBarHeight + systemInfo.screenWidth * 88 / 750
       });
+      console.log("当前系统信息!",systemInfo);
     }
   }
 })

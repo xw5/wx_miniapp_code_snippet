@@ -1,0 +1,18 @@
+<navigation-bar
+  title="返回被截持"
+  titleBgColor="#FE5442"
+  isShowBack="{{true}}"
+  isFixed="{{true}}"
+  isCatchBack="{{true}}"
+  bind:backAction="backAction"
+></navigation-bar>
+<view class="container">
+  <text class="tips">截持返回功能的navigation-bar演示，具体要返回或者做别的功能就由你自由发挥了</text>
+  <navigator
+    class="page_link"
+    hover-class="navigator-hover"
+    open-type="navigateBack"
+  >
+   返回
+  </navigator>
+</view>

@@ -1,0 +1,27 @@
+{
+  "name": "wx_miniapp_code_snippet",
+  "version": "1.0.0",
+  "description": "小程序代码片段",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xw5/wx_miniapp_code_snippet.git"
+  },
+  "keywords": [
+    "miniprogram",
+    "小程序",
+    "code snippet"
+  ],
+  "author": "xw5",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xw5/wx_miniapp_code_snippet/issues"
+  },
+  "homepage": "https://github.com/xw5/wx_miniapp_code_snippet#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}

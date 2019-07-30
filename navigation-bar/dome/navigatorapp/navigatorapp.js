@@ -1,7 +1,9 @@
 Page({
-
   data: {
-
+    titleBarLinkConfig: {
+      appId:"wx5bc4052da6969b58",
+      title:"趣步赚"
+    }
   },
 
   onLoad: function () {
