@@ -1,16 +1,12 @@
 var gulp = require('gulp');
 // 要实现的命令名
-const inDirList = [
-  'navbar' // 移动navigation-bar文件到演示示例中更新演示文件
-];
-// 对应命令的输出目录
-const outDirList = [
-  'navigation-bar'
+const taskList = [
+  'navigation-bar' // 移动navigation-bar文件到演示示例中更新演示文件
 ];
 
-for(let i=0,len=inDirList.length; i<len; i++) {
-  gulp.task(inDirList[i], function() {
-    return gulp.src(`./${outDirList[i]}/src/**/*.*`)
-    .pipe(gulp.dest(`./${outDirList[i]}/dome/src/`))
+for(let i=0,len=taskList.length; i<len; i++) {
+  gulp.task(taskList[i], function() {
+    return gulp.src(`./${taskList[i]}/src/**/*.*`)
+    .pipe(gulp.dest(`./${taskList[i]}/dome/src/`))
   })
 }

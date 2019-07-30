@@ -5,7 +5,7 @@
 ---
 ## 项目目录结构说明
 每个代码段都是一样结构的，此处我们以navigation-bar为例,dome下为演示的小程序代码片段（用于学习参考使用），src目录下的为当前代码段的源码（也就是你需要放到你代码中的）
-
+``` markdown
 navigation-bar
 ├─dome
 │  ├─catchback
@@ -17,3 +17,4 @@ navigation-bar
 │  └─style
 └─src
     └─navigation-bar
+```

@@ -43,19 +43,23 @@ Component({
   },
 
   methods: {
+    // 获取当前navigation-bar的高度
     getHeight: function() {
       return this.data.navBarHeight
     },
+    // 设置navigation-bar的背景
     setTitleBgColor: function(color) {
       this.setData({
         setTitleBgColor: color
       });
     },
+    // 设置navigation-bar的正中标题文字颜色
     setTitleColor: function(color) {
       this.setData({
         setTitleColor: color
       });
     },
+    // 设置navigation-bar的返回按键文字颜色
     setBackColor: function(color) {
       this.setData({
         setBackColor: color
@@ -95,7 +99,6 @@ Component({
         statusBarHeight: systemInfo.statusBarHeight,
         navBarHeight: systemInfo.statusBarHeight + systemInfo.screenWidth * 88 / 750
       });
-      console.log("当前系统信息!",systemInfo);
     }
   }
 })
