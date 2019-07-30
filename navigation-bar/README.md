@@ -46,4 +46,4 @@
 
 * getHeight,通过此函数能够获取当前navigationBar的高度，用于外界元素的适配使用
 
-[点击此处使用查看演示示例](https://developers.weixin.qq.com/s/pPqMrfms7RaL)
+[使用小程序开发者工具查看演示示例](https://developers.weixin.qq.com/s/pPqMrfms7RaL)
