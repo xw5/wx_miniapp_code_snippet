@@ -1,4 +1,7 @@
 # 常用hand-guide
+## 大致预览
+![hand-guide动图](http://github.com/xw5/wx_miniapp_code_snippet/master/asstes/hand-guide-img.gif)
+
 ## 使用方法
 
 1. 在对应页面的json中引入组件

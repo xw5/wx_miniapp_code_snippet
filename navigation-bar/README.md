@@ -1,4 +1,7 @@
 # 自定义navigation-bar
+## 大致预览
+![navigation-bar动图](http://github.com/xw5/wx_miniapp_code_snippet/master/asstes/navigation-bar-img.gif)
+
 ## 使用方法
 
 1. 首先需在app.json增加如下配置

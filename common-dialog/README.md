@@ -1,4 +1,7 @@
 # 弹窗代码段
+## 大致预览
+![common-dialog动图](http://github.com/xw5/wx_miniapp_code_snippet/master/asstes/common-dialog-img.gif)
+
 ## 使用方法
 
 这只是一个弹窗使用模板，base-dialog可以提出全局组件，真正在工作中，你需要把common-dialog改成你自己的弹窗名字，并在指定的区域定制你多样化的弹窗需求
@@ -22,4 +25,4 @@
 * setShowClose：      通过此方法设置关闭按钮是否显示
 * setShowCloseText：  通过此方法设置关闭按钮文案内容
 
-[使用小程序开发者工具查看演示示例](https://developers.weixin.qq.com/s/pPqMrfms7RaL)
+[使用小程序开发者工具查看演示示例](https://developers.weixin.qq.com/s/olf3Khma7xa2)
