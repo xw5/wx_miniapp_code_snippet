@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "common-dialog":"../src/common-dialog/common-dialog"
+  }
+}

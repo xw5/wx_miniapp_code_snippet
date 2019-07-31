@@ -1,0 +1,11 @@
+<view hidden="{{!show}}" class="modal">
+  <view catchtap="_onMaskTap" catchtouchmove="move" class="modal-mask"></view>
+  <view class="box" style="margin-top:{{isFixPos ? titleBarHeight / 2 : 0}}px">
+    <view class="content" catchtouchmove="move">
+      <slot></slot>
+    </view>
+    <view wx:if="{{showClose && btnCloseText != ''}}" class="close-btn" catchtouchmove="move">
+      <text bindtap="_onCloseTap" catchtouchmove="move"  style="color:{{closeColor ? closeColor : 'inherit'}}">{{btnCloseText}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<view class="container">
+  <text class="tips">Hello,小程序</text>
+  <text class="tips"></text>
+  <view class="click_me">
+    <button type="primary" size="default" bind:tap="clickMe">显示弹窗</button>
+  </view>
+</view>
+<!-- 这里是弹窗内容 -->
+<common-dialog
+  id="common-dialog"
+  showClose="{{true}}"
+  btnCloseText="点我关闭"
+  isMaskClose="{{true}}"
+  bind:dialogClose="_onDialogClose"
+  bind:touchMask="_onMaskTap"
+/>

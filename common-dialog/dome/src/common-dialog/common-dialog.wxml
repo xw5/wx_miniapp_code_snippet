@@ -1,0 +1,16 @@
+<base-dialog
+  id="baseDialog" 
+  showClose="{{showClose}}"
+  isMaskClose="{{isMaskClose}}"
+  isFixPos="{{isFixPos}}"
+  btnCloseText="{{btnCloseText}}"
+  closeColor="{{closeColor}}"
+  bind:dialogClose="_onDialogClose"
+  bind:touchMask="_onMaskTap"
+> 
+  <!-- 这里开始定制你的弹窗内容 -->
+  <view class="container">
+    {{tips}}
+  </view>
+  <!-- 这里开始定制你的弹窗内容 -->
+</base-dialog>

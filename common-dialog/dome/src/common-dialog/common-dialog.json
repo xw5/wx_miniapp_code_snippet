@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "base-dialog": "../base-dialog/base-dialog"
+  }
+}
