@@ -1,6 +1,6 @@
 # 弹窗代码段
 ## 大致预览
-![common-dialog动图](http://github.com/xw5/wx_miniapp_code_snippet/master/asstes/common-dialog-img.gif)
+![common-dialog动图](http://github.com/xw5/wx_miniapp_code_snippet/raw/master/assets/common-dialog-img.gif)
 
 ## 使用方法
 
