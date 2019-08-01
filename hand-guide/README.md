@@ -1,6 +1,6 @@
 # 常用hand-guide
 ## 大致预览
-![hand-guide动图](http://github.com/xw5/wx_miniapp_code_snippet/raw/master/assets/hand-guide-img.gif)
+![hand-guide动图](/assets/hand-guide-img.gif)
 
 ## 使用方法
 
