@@ -1,6 +1,6 @@
 # 自定义navigation-bar
 ## 大致预览
-![navigation-bar动图](http://github.com/xw5/wx_miniapp_code_snippet/raw/master/assets/navigation-bar-img.gif)
+![navigation-bar动图](/assets/navigation-bar-img.gif)
 
 ## 使用方法
 
