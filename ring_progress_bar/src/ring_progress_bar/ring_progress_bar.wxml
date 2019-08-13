@@ -1,0 +1,72 @@
+<!--pages/components/ring_prigress_bar/ring_prigress_bar.wxml-->
+<view class="container" style="width:{{size}}rpx;height:{{size}}rpx;box-shadow: 0 0 0 {{baseColor ? progressWidth : 0}}rpx {{progressColor}} inset;">
+  <view class="container_in" style="height:{{size}}rpx">
+    <view
+      class="circle_left" 
+      style="border:{{progressWidth}}rpx solid {{baseColor ? baseColor : progressColor}};border-top-left-radius:{{size / 2}}rpx;border-bottom-left-radius:{{size / 2}}rpx;border-right-color:transparent;transform:rotateZ({{dataCompute.leftDegCompute(value, baseColor ? 0 : 1)}}deg);"
+    ></view>
+  </view>
+  <view class="container_in" style="height:{{size}}rpx">
+    <view 
+      class="circle_right" 
+      style="border:{{progressWidth}}rpx solid {{baseColor ? baseColor : progressColor}};border-top-right-radius:{{size / 2}}rpx;border-bottom-right-radius:{{size / 2}}rpx;border-left-color:transparent;transform:rotateZ({{dataCompute.rightDegCompute(value, baseColor ? 0 : 1)}}deg);"
+    ></view>
+  </view>
+  <view class="progress_value" wx:if="{{fontSize > 0}}">
+    <text style="color:{{fontColor}};font-size:{{fontSize}}rpx">{{dataCompute.decimalLimit(value, maxValue, decimalDigits, symbolUnit)}}</text>
+  </view>
+</view>
+<wxs module="dataCompute">
+  module.exports={
+    /*
+    * @param {number} value是当前进度
+    * @param {number} type是当前进度的类型 0为带基础填充的，1为不带的
+    */
+    leftDegCompute:function(value, type) {
+      var tempDeg = 0;
+      if (type === 1) {
+        tempDeg = (value<0.5 ? 0 : value-0.5) * 2 * 180 -180;
+        if (tempDeg >= 0) {
+          tempDeg = 0;
+        }
+      } else {
+        tempDeg = (value<0.5 ? 0 : value-0.5) * 2 * 180;
+        if (tempDeg >= 180) {
+          tempDeg = 180;
+        }
+      }
+      return tempDeg;
+    },
+    /*
+    * @param {number} value是当前进度
+    * @param {number} type是当前进度的类型 0为带基础填充的，1为不带的
+    */
+    rightDegCompute:function(value, type) {
+      var tempDeg = 0;
+      if (type === 1) {
+        tempDeg = value * 2 * 180 - 180;
+        if (tempDeg >= 0) {
+          tempDeg = 0;
+        }
+      } else {
+        tempDeg = value * 2 * 180;
+        if (tempDeg >= 180) {
+          tempDeg = 180;
+        }
+      }
+      return tempDeg;
+    },
+    /*
+    * @param {number} value是当前进度
+    * @param {number} count是要保留的小数位数
+    * @param {symbolUnit} symbolUnit进度值显示要加的符号
+    */
+    decimalLimit:function(value, maxValue, count, symbolUnit) {
+      if (count) {
+        return Number(value * maxValue).toFixed(count) + symbolUnit;
+      } else {
+        return parseInt(value * maxValue) + symbolUnit;
+      }
+    }
+  }
+</wxs>
