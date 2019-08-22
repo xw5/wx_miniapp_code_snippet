@@ -1,0 +1,24 @@
+<view class="container">
+  <ring_progress_bar
+    value="{{0.8}}"
+    size="{{110}}"
+  />
+  <ring_progress_bar
+    value="{{0.7}}"
+    size="{{180}}"
+    baseColor="#ccc"
+  />
+  <ring_progress_bar
+    value="{{per}}"
+    size="{{150}}"
+    fontSize="{{48}}"
+    maxValue="{{500}}"
+  />
+  <ring_progress_bar
+    value="{{per}}"
+    size="{{150}}"
+    baseColor="#ccc"
+    fontSize="{{40}}"
+    symbolUnit="%"
+  />
+</view>
