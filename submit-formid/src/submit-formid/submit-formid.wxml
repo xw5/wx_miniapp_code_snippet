@@ -1,0 +1,5 @@
+<form class="submit-form" report-submit bindsubmit="catchSubmit">
+	<button form-type="{{isNeedReport ? 'submit' : ''}}" class="submit-btn" hover-class='submit-btn_hover'>
+		<slot></slot>
+	</button>
+</form>

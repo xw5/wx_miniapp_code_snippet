@@ -1,0 +1,27 @@
+.submit-form {
+	border: none;
+	padding: 0;
+  margin: 0;
+  font-size:inherit;
+  line-height: inherit;
+  color:inherit;
+	background: transparent;
+	border-radius: 0;
+}
+.submit-btn{
+  font-size:inherit;
+  line-height: inherit;
+  color:inherit;
+  text-align: left;
+  padding:0;
+  margin:0;
+  border-radius:0;
+  background: transparent;
+}
+.submit-btn::after {
+	border: none;
+}
+
+.submit-btn_hover {
+	opacity: 0.7;
+}

@@ -1,0 +1,9 @@
+<view class="container">
+  <submit-formid 
+    bind:catchSubmit="formidReport"
+    bind:tap="testFn"
+    data-test="123"
+  >
+    <view class="test_btn">测试上报按钮</view>
+  </submit-formid>
+</view>

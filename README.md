@@ -6,6 +6,7 @@
 3. common-dialog 这是弹窗代码段，可以以common-dialog为基础定制你自己的弹窗。
 4. ring_progress_bar 这是圆形进度条代码段，可以用于展示圆形进条或者当计时器用等...。
 5. cloud_controller 这是一个无需后端提供接口和管理后台，即可配置页面功能的简化方案，由于代码比较简单,没有提供dome。
+6. submit-formid 这是一个用于formid上报的小程序自定义组件代码段。
 
 **持续更新中...**
 
