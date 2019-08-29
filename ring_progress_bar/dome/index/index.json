@@ -1,5 +1,0 @@
-{
-  "usingComponents": {
-    "ring_progress_bar":"../src/ring_progress_bar/ring_progress_bar"
-  }
-}
