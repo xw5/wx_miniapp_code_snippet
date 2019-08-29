@@ -6,14 +6,14 @@
 3. common-dialog 这是弹窗代码段，可以以common-dialog为基础定制你自己的弹窗。
 4. ring-progress-bar 这是圆形进度条代码段，可以用于展示圆形进条或者当计时器用等...，当你使用的场景在小程序原生组件的限制范围内时推荐使用此组件，否则推荐给使用它的canvas版。
 5. ring-progress-bar-canvas 这是ring-progress-bar圆形进度条代码段的canvas版，可以用于展示圆形进条或者当计时器用等...。
-6. cloud_controller 这是一个无需后端提供接口和管理后台，即可配置页面功能的简化方案，由于代码比较简单,没有提供dome。
+6. cloud_controller 这是一个无需后端提供接口和管理后台，即可配置页面功能的简化方案，由于代码比较简单,没有提供demo。
 7. submit-formid 这是一个用于formid上报的小程序自定义组件代码段。
-8. common_request 这是小程序接口请求wx.request的Promise包装，由于代码比较简单,没有提供dome。
+8. common_request 这是小程序接口请求wx.request的Promise包装，由于代码比较简单,没有提供demo。
 
 **持续更新中...**
 
 ## 项目目录结构说明
-每个代码段基本都是一样目录结构，此处我们以navigation-bar为例,dome下为演示的小程序代码片段（用于学习参考使用），src目录下的为当前代码段的源码，也就是你需要放到你代码中的。
+每个代码段基本都是一样目录结构，此处我们以navigation-bar为例,demo下为演示的小程序代码片段（用于学习参考使用），src目录下的为当前代码段的源码，也就是你需要放到你代码中的。
 ``` markdown
 navigation-bar
 ├─dome
