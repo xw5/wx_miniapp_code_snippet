@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "ring-progress-bar-canvas":"../src/ring-progress-bar-canvas/ring-progress-bar-canvas"
+  }
+}

@@ -63,7 +63,7 @@
     /*
     * @param {number} value是当前进度
     * @param {number} count是要保留的小数位数
-    * @param {symbolUnit} symbolUnit进度值显示要加的符号
+    * @param {string} symbolUnit进度值显示要加的符号
     */
     decimalLimit:function(value, maxValue, count, symbolUnit) {
       if (count) {

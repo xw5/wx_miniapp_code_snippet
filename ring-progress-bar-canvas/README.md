@@ -1,9 +1,9 @@
-# 常用圆形进度条ring_progress_bar
+# 常用圆形进度条ring-progress-bar-canvas
 ## 大致预览
-![ring-progress-bar动图](/assets/ring_progress_bar.gif)
+![ring-progress-bar-canvas动图](/assets/ring_progress_bar_canvas.gif)
 
 ## why
-小程序端是支持canvas的，实现这种圆环进度用canvas应该是最理想的，但是小程序有坑，像canvas等原生组件是有使用限制的，见官方文挡 [原生组件的使用限制](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html#%E5%8E%9F%E7%94%9F%E7%BB%84%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8%E9%99%90%E5%88%B6),我就踩到这个坑了，因此就用纯html的方式实现了这种圆环进度效果。
+代码段里有一个ring-progress-bar组件，为什么还要提供一个canvas版，从性能和美观方面，canvas方案都是优于html版的，所以在没有在小程序限制范围内可以推荐使用canvas版。
 
 ## 使用方法
 
@@ -11,7 +11,7 @@
 ``` json
 {
   "usingComponents": {
-    "ring-progress-bar": "ring-progress-bar存放目录"
+    "ring-progress-bar-canvas": "ring-progress-bar-canvas存放目录"
   }
 }
 ```

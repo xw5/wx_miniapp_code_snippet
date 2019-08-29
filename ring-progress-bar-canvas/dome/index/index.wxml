@@ -1,0 +1,30 @@
+<view class="container">
+  <ring-progress-bar-canvas
+    class="ring_progress_item"
+    value="{{0.6}}"
+  ></ring-progress-bar-canvas>
+
+  <ring-progress-bar-canvas
+    class="ring_progress_item"
+    size="{{200}}"
+    value="{{value}}"
+    progressWidth="{{20}}"
+    baseColor="#ccc"
+  ></ring-progress-bar-canvas>
+
+  <ring-progress-bar-canvas
+    class="ring_progress_item"
+    size="{{200}}"
+    value="{{value}}"
+    progressWidth="{{20}}"
+  ></ring-progress-bar-canvas>
+
+  <ring-progress-bar-canvas
+    class="ring_progress_item"
+    size="{{180}}"
+    value="{{value}}"
+    fontSize="{{24}}"
+    symbolUnit="%"
+    progressWidth="{{20}}"
+  ></ring-progress-bar-canvas>
+</view>
