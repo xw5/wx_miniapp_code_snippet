@@ -1,0 +1,8 @@
+<view class="container">
+  <button bind:tap="setStorageSync">setStorageSync</button>
+  <button bind:tap="getStorageSync">getStorageSync</button>
+  <button bind:tap="setStorage">setStorage</button>
+  <button bind:tap="getStorage">getStorage</button>
+  <button bind:tap="setStorageForToday">setStorageForToday</button>
+  <button bind:tap="getStorageForToday">getStorageForToday</button>
+</view>

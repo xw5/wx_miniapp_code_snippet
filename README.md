@@ -9,6 +9,7 @@
 6. cloud_controller 这是一个无需后端提供接口和管理后台，即可配置页面功能的简化方案，由于代码比较简单,没有提供demo。
 7. submit-formid 这是一个用于formid上报的小程序自定义组件代码段。
 8. common_request 这是小程序接口请求wx.request的Promise包装，由于代码比较简单,没有提供demo。
+9. common_storage 这是小程序本地存储的一些方法封装，同步版和异步的Promise包装版，同时提供用于标示当天的本地存储方法。
 
 **持续更新中...**
 
@@ -16,7 +17,7 @@
 每个代码段基本都是一样目录结构，此处我们以navigation-bar为例,demo下为演示的小程序代码片段（用于学习参考使用），src目录下的为当前代码段的源码，也就是你需要放到你代码中的。
 ``` markdown
 navigation-bar
-├─dome
+├─demo
 │  ├─catchback
 │  ├─hasback
 │  ├─index
