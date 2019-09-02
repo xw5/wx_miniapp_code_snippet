@@ -45,3 +45,5 @@ import {
   // 判断本地存储中key为testToday的值是否是当天
   let test1Status = judgeStorageIsToday("testToday");
 ```
+
+[使用小程序开发者工具查看演示示例](https://developers.weixin.qq.com/s/Dj1705mT76ba)
