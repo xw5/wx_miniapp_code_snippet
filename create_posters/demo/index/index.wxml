@@ -1,0 +1,7 @@
+
+<view style="width:100%;text-align:center;color:red;">海报生成需要有保存到相册的权限</view>
+<view style='width:0px;height:0px;overflow:hidden;'>
+  <canvas canvas-id="canvasid" style="width:720px;height:1280px" />
+</view>
+<button open-type="openSetting" bindopensetting="openSettingFn">授权</button>
+<button bind:tap="createPosters">生成海报</button>
