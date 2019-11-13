@@ -21,6 +21,8 @@ import {
   * setStorage异步设置本地存储值Promise版 
   * setStorageForToday设置一个存储值为当天的标示
   * getStorageForToday判断当前存储值是否为当天
+  * setStorageInTodayAddValue 存储一个key的本地存储,内容为当前日期_特殊内容的值如:20191113_1
+  * getStorageIsTodayAndValue 获取当前key存储的是不是今天的日期值_特殊值，并返回isToday(是否是今天)value(特殊值)构成的对象{isToday: false, value: ""}
 
   使用示例如下：
 ``` js
@@ -39,11 +41,19 @@ import {
     test0Value = data;
   }).catch(() => {});
 
+  // 主要用于解决那些标示当天的需求
   // 存储本地存储中key为testToday的值为当天日期，如20190902
   setStorageInToday("testToday");
 
   // 判断本地存储中key为testToday的值是否是当天
   let test1Status = judgeStorageIsToday("testToday");
+
+  // 主要用于解决那些当天能标示多次的需求
+  // 存储本地存储中key为testTodayKey的值为当天日期_特殊值，如20191113_1
+  setStorageInTodayAddValue("testTodayKey", 1);
+
+  // 判断本地存储中key为testTodayKey的值,返回对象可得知是否是今天，且是否有特殊值,如{isToday: true, value: 1}
+  let test2Obj = getStorageIsTodayAndValue("testTodayKey");
 ```
 
-[使用小程序开发者工具查看演示示例](https://developers.weixin.qq.com/s/Dj1705mT76ba)
+[使用小程序开发者工具查看演示示例](https://developers.weixin.qq.com/s/rgIBHQmB7mc2)

@@ -96,3 +96,42 @@ export function getStorageForToday(key) {
     return false
   }
 }
+
+/**
+ * 
+ * @param key 存储一个key的本地存储,内容为当前日期_特殊内容的值如:20190504_1
+ */
+export function setStorageInTodayAddValue(key, value) {
+  try{
+    wx.setStorageSync(key,today()+"_"+value);
+  } catch(e) {
+  }
+}
+
+/**
+ * 
+ * @param key 获取当前key存储的是不是今天的日期值_特殊值，并返回特殊值，如:20190504
+ */
+export function getStorageIsTodayAndValue(key) {
+  try{
+    var value = wx.getStorageSync(key);
+    var tempArr = value.split("_");
+    var todayStr = today();
+    if (tempArr && tempArr[0] == todayStr) {
+      return {
+        isToday: true,
+        value: tempArr[1]
+      };
+    } else {
+      return {
+        isToday: false,
+        value: ""
+      };
+    }
+  } catch(e) {
+    return {
+      isToday: false,
+      value: ""
+    };
+  }
+}

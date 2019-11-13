@@ -5,4 +5,6 @@
   <button bind:tap="getStorage">getStorage</button>
   <button bind:tap="setStorageForToday">setStorageForToday</button>
   <button bind:tap="getStorageForToday">getStorageForToday</button>
+  <button bind:tap="setStorageInTodayAddValue">setStorageInTodayAddValue</button>
+  <button bind:tap="getStorageIsTodayAndValue">getStorageIsTodayAndValue</button>
 </view>

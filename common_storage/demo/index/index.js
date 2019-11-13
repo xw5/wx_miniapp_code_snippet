@@ -4,7 +4,9 @@ import {
   getStorage, 
   setStorage, 
   setStorageForToday, 
-  getStorageForToday
+  getStorageForToday,
+  setStorageInTodayAddValue,
+  getStorageIsTodayAndValue
 } from "../src/common_storage";
 
 Page({
@@ -40,5 +42,12 @@ Page({
   getStorageForToday: function() {
     let testToday = getStorageForToday("testToday");
     console.log("是否今天已经存储过testToday为今天日期的标示", testToday);
+  },
+  setStorageInTodayAddValue: function() {
+    setStorageInTodayAddValue("testTodayKey",1);
+  }, 
+  getStorageIsTodayAndValue: function() {
+    let testToday = getStorageIsTodayAndValue("testTodayKey");
+    console.log("当前存储的值", testToday);
   }
 })
