@@ -11,6 +11,7 @@
 8. common_request 这是小程序接口请求**wx.request的Promise包装**，由于代码比较简单,没有提供demo。
 9. common_storage 这是小程序**本地存储的一些方法封装**，同步版和异步的Promise包装版，同时提供用于标示当天的本地存储方法。
 10. create_poster 这是小程序生成**分享海报**的代码段，支持网络图片和本地小程序图片
+11. create_rewarded_video_ad 这是小程序**激励视频接入**的代码段
 
 **持续更新中...**
 
