@@ -53,6 +53,12 @@ let CreateSharePoster = require("create_poster.js地址").CreateSharePoster;
         color: "#B5934B",
         x: 360,
         y: 784
+      }
+      // ,{
+      //   type: "custom",
+      //   action: function(ctx) {
+      //     ctx是canvas绘画对象，这里可以随你自由发挥,解决一些非图片文字的绘图需求
+      //   }
       }]
     });
     createSharePoster.createPosters("canvasid", (res) => {

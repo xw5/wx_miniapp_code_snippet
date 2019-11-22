@@ -35,6 +35,11 @@ class CreateSharePoster {
         color: "#B5934B",
         x: 360,
         y: 784,
+      },{
+        type: "custom",
+        action: function(ctx) {
+          ctx是canvas绘画对象，这里可以随你自由发挥
+        }
       }
     ];
    */
@@ -53,7 +58,7 @@ class CreateSharePoster {
    * @param {function} callback 回调
    * @param {boolean} isSave 判断是否要保存到本地
    */
-  createPosters(canvasId, callback, isSave = true) {
+  createSharePosters(canvasId, callback, isSave = true) {
     let self = this;
     this.isSave = isSave;
     if (isSave) {
@@ -130,8 +135,10 @@ class CreateSharePoster {
     this.drawList.forEach((item) => {
       if (item.type === "image") {
         this.drawImage(ctx, item);
-      } else {
+      } else if(item.type === "text") {
         this.drawText(ctx, item);
+      } else {
+        item.action && item.action(ctx);
       }
     });
     console.log(TAG, "draw finish");
