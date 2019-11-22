@@ -1,0 +1,8 @@
+<view wx:if="{{isAdSuccess}}" class="ad_container" style="width:{{width<0 ? '100%' : width+'rpx'}};">
+  <ad 
+    unit-id="{{unitId}}" 
+    bindload="adSucessLoad" 
+    binderror="adErrorLoad"
+    type="{{adType}}"
+  />
+</view>
