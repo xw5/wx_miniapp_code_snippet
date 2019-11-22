@@ -53,7 +53,7 @@ class CreateSharePoster {
    * @param {function} callback 回调
    * @param {boolean} isSave 判断是否要保存到本地
    */
-  createSharePosters(canvasId, callback, isSave = true) {
+  createPosters(canvasId, callback, isSave = true) {
     let self = this;
     this.isSave = isSave;
     if (isSave) {
