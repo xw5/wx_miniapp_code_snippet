@@ -1,5 +1,5 @@
 const app = getApp()
-let ShareImageCreator = require("../src/create_posters.js").ShareImageCreator;
+let CreateSharePoster = require("../src/create_posters.js").CreateSharePoster;
 Page({
   data: {
 
@@ -22,7 +22,7 @@ Page({
     });
   },
   createPosters: function() {
-    let shareImageCreator = new ShareImageCreator({
+    let createSharePoster = new CreateSharePoster({
       list:[{
           type: "image",
           image: "../assets/posters_bg.png",
@@ -54,7 +54,7 @@ Page({
           y: 784
         }]
     });
-    shareImageCreator.createSharePosters("canvasid", (res) => {
+    createSharePoster.createPosters("canvasid", (res) => {
       console.log("海报生成情况:", res);
     });
   }

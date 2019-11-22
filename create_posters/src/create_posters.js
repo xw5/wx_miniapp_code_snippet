@@ -1,6 +1,6 @@
-const TAG = 'createShareImage';
+const TAG = 'CreateSharePoster';
 
-class ShareImageCreator {
+class CreateSharePoster {
   /**
    * 
    * @param {obj} config {w:720,h:1800,list:[]}由海报宽 海报高 海报要加绘的数据列表
@@ -40,33 +40,41 @@ class ShareImageCreator {
    */
   constructor(config) {
     console.log(TAG, 'ShareImageCreator');
-    this.posterw = config && config.w ? config.w : 720;   // 海报宽, 默认720
-    this.posterh = config && config.h ? config.h : 1280;   // 海报高, 默认1800
+    this.posterw = config && config.w ? config.w : 750;   // 海报宽, 默认720
+    this.posterh = config && config.h ? config.h : 1334;   // 海报高, 默认1800
     this.drawList = config && config.list ? config.list : null;  // 海报要绘制数据
   }
 
+  endCallback= null // 海报生成后的回调
+  isSave= true // 是否要保存海服到本地
   /**
    * // 开始生成海报
    * @param {string} canvasId canvas的id
    * @param {function} callback 回调
+   * @param {boolean} isSave 判断是否要保存到本地
    */
-  createSharePosters(canvasId, callback) {
+  createPosters(canvasId, callback, isSave = true) {
     let self = this;
-    wx.getSetting({
-      success (res) {
-        console.log(res.authSetting);
-        if (res.authSetting["scope.writePhotosAlbum"]) {
-          self.createShareImage(canvasId, callback);
-        } else {
-          wx.openSetting({
-            "scope": "scope.writePhotosAlbum",
-            success: function() {
-              self.createShareImage(canvasId, callback);
-            }
-          });
+    this.isSave = isSave;
+    if (isSave) {
+      wx.getSetting({
+        success (res) {
+          console.log(res.authSetting);
+          if (res.authSetting["scope.writePhotosAlbum"]) {
+            self.createShareImage(canvasId, callback);
+          } else {
+            qq.authorize({
+              "scope": "scope.writePhotosAlbum",
+              success: function() {
+                self.createShareImage(canvasId, callback);
+              }
+            });
+          }
         }
-      }
-    })
+      })
+    } else {
+      self.createShareImage(canvasId, callback);
+    }
   }
 
   /**
@@ -140,7 +148,13 @@ class ShareImageCreator {
         canvasId: canvasId,
         success: function(res) {
           console.log(TAG, "canvasToTempFilePath", res);
-          self.doSaveImage(res.tempFilePath, callback);
+          let posterImg = res.tempFilePath;
+          if (!self.isSave) {
+            callback && callback(posterImg);
+          } else {
+            self.doSaveImage(posterImg, callback);
+          }
+          self.endCallback && self.endCallback(posterImg);
         }
       });
     });
@@ -178,12 +192,14 @@ class ShareImageCreator {
    * @param {obj} obj  要绘制的内容
    */
   drawImage(ctx, obj) {
-    ctx.drawImage(
-      obj.image,
-      obj.x,
-      obj.y,
-      obj.w,
-      obj.h);
+    if (obj.image) {
+      ctx.drawImage(
+        obj.image,
+        obj.x,
+        obj.y,
+        obj.w,
+        obj.h);
+    }
   }
   /**
    * 
@@ -191,11 +207,17 @@ class ShareImageCreator {
    * @param {obj} obj  要绘制的内容
    */
   drawText(ctx, obj) {
-    ctx.setFillStyle(obj.color);
-    ctx.setFontSize(obj.font);
-    ctx.setTextAlign(obj.align);
-    ctx.fillText(obj.title, obj.x, obj.y);
+    if (obj.title) {
+      ctx.setFillStyle(obj.color);
+      ctx.setFontSize(obj.font);
+      ctx.setTextAlign(obj.align);
+      if (obj.maxWidth) {
+        ctx.fillText(obj.title, obj.x, obj.y, obj.maxWidth);
+      } else {
+        ctx.fillText(obj.title, obj.x, obj.y);
+      }
+    }
   }
 }
 
-module.exports.ShareImageCreator = ShareImageCreator
+module.exports.CreateSharePoster = CreateSharePoster
