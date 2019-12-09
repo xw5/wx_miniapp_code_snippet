@@ -39,6 +39,7 @@
 * progressColor进度条颜色,默认为#FF3356
 * baseColor进度条底色颜色，默认为空，不配则不显示底色
 * fontSize圈中间数字显示大小，默认为0，不显示数字
+* fontColor圈中间数字颜色
 * decimalDigits圈中间数字要保留的小数位数
 * symbolUnit圈中数字是否要显示符号如%等，默认不显示
 * maxValue圈中数字最大值，默认为100，当value为1时显示maxValue，其它值则按value换算显示，如value为0.6时，配置的maxValue为500，则圈中数字显示为300
