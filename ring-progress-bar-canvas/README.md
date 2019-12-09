@@ -37,6 +37,7 @@
 * value: 必传属性，内部进度条填充进度配置项，范围为0-1
 * progressWidth进度条粗细，默认为10rpx
 * progressColor进度条颜色,默认为#FF3356
+* lineCap定义弧形端点样式：butt(默认) square(正方形) round(圆形)
 * baseColor进度条底色颜色，默认为空，不配则不显示底色
 * fontSize圈中间数字显示大小，默认为0，不显示数字
 * fontColor圈中间数字颜色

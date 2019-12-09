@@ -68,6 +68,12 @@ Component({
     maxValue: {
       type: Number,
       value: 100
+    },
+    
+    // 线条的结束端点样式 butt(默认) square(正方形) round(圆形)
+    lineCap: {
+      type: String,
+      value: "butt"
     }
   },
   drawRatio: 1,
@@ -111,13 +117,13 @@ Component({
         this.circleCanvas.beginPath();
         this.circleCanvas.setStrokeStyle(baseColor);
         this.circleCanvas.setLineWidth(Math.floor(progressWidth*this.drawRatio));
-        this.circleCanvas.arc(0, 0, Math.floor((size/2)*this.drawRatio), 0, Math.PI * 2, false);
+        this.circleCanvas.arc(0, 0, Math.floor((size/2 - progressWidth)*this.drawRatio), 0, Math.PI * 2, false);
         this.circleCanvas.stroke();
       }
       this.circleCanvas.beginPath();
       this.circleCanvas.setStrokeStyle(progressColor);
       this.circleCanvas.setLineWidth(Math.floor(progressWidth*this.drawRatio));
-      this.circleCanvas.arc(0, 0, Math.floor((size/2)*this.drawRatio), 0, Math.PI * 2 * valueParam, false);
+      this.circleCanvas.arc(0, 0, Math.floor((size/2 - progressWidth)*this.drawRatio), 0, Math.PI * 2 * valueParam, false);
       this.circleCanvas.stroke();
       this.circleCanvas.draw();
       this.circleCanvas.restore()
