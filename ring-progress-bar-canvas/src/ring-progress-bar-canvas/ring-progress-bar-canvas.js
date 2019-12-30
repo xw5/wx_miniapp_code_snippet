@@ -108,8 +108,8 @@ Component({
       if (!this.circleCanvas) {
         this.circleCanvas = wx.createCanvasContext("circleCanvas", this);
       }
-      this.circleCanvas.clearRect(0, 0, Math.floor(size*this.drawRatio), Math.floor(size*this.drawRatio));
       this.circleCanvas.save()
+      this.circleCanvas.clearRect(0, 0, Math.floor(size*this.drawRatio), Math.floor(size*this.drawRatio));
       this.circleCanvas.translate(Math.floor(size/2*this.drawRatio), Math.floor(size/2*this.drawRatio));
       this.circleCanvas.rotate(270*Math.PI/180);
       // 如果有底边
@@ -125,8 +125,8 @@ Component({
       this.circleCanvas.setLineWidth(Math.floor(progressWidth*this.drawRatio));
       this.circleCanvas.arc(0, 0, Math.floor((size/2 - progressWidth)*this.drawRatio), 0, Math.PI * 2 * valueParam, false);
       this.circleCanvas.stroke();
-      this.circleCanvas.draw();
       this.circleCanvas.restore()
+      this.circleCanvas.draw();
     }
   }
 })
