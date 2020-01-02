@@ -25,6 +25,19 @@
     value="{{value}}"
     fontSize="{{24}}"
     symbolUnit="%"
+    lineCap="round"
     progressWidth="{{20}}"
   ></ring-progress-bar-canvas>
+  <ring-progress-bar-canvas
+    class="ring_progress_item"
+    size="{{180}}"
+    value="{{value}}"
+    fontSize="{{24}}"
+    symbolUnit="%"
+    startAngle="{{225}}"
+    endAngle="{{495}}"
+    lineCap="round"
+    progressWidth="{{20}}"
+  ></ring-progress-bar-canvas>
+  
 </view>

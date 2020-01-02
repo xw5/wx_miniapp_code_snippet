@@ -1,7 +1,7 @@
 <!--pages/components/ring-progress-bar-canvas/ring-progress-bar-canvas.wxml-->
 <view class="container" style="width:{{size}}rpx;height:{{size}}rpx;">
   <view class="container_in" style="width:{{size}}rpx;height:{{size}}rpx;">
-    <canvas canvas-id="circleCanvas" style="width:{{size}}rpx;height:{{size}}rpx;"></canvas>
+    <canvas canvas-id="circleCanvas" style="width:{{size}}rpx;height:{{size}}rpx;background-color:transparent;"></canvas>
   </view>
   <view class="progress_value" wx:if="{{fontSize > 0}}">
     <text style="color:{{fontColor}};font-size:{{fontSize}}px">{{dataCompute.decimalLimit(value, maxValue, decimalDigits, symbolUnit)}}</text>

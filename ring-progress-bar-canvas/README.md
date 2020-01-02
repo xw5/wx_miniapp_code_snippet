@@ -3,7 +3,7 @@
 ![ring-progress-bar-canvas动图](/assets/ring_progress_bar_canvas.gif)
 
 ## why
-代码段里有一个ring-progress-bar组件，为什么还要提供一个canvas版，从性能和扩展方面，canvas方案都是优于html版的，所以没有在小程序原生组件使用限制范围内的情况推荐使用canvas版 [原生组件的使用限制](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html#%E5%8E%9F%E7%94%9F%E7%BB%84%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8%E9%99%90%E5%88%B6)。
+代码段里有一个ring-progress-bar组件，为什么还要提供一个canvas版，从性能和扩展方面，canvas方案都是优于html版的，所以没有在小程序原生组件使用限制范围内的情况推荐使用canvas版 [原生组件的使用限制](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html#%E5%8E%9F%E7%94%9F%E7%BB%84%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8%E9%99%90%E5%88%B6)，同时canvas支持配置开始和结束角度，可以绘制像表盘一样的图表。
 
 ## 使用方法
 
@@ -44,6 +44,7 @@
 * decimalDigits圈中间数字要保留的小数位数
 * symbolUnit圈中数字是否要显示符号如%等，默认不显示
 * maxValue圈中数字最大值，默认为100，当value为1时显示maxValue，其它值则按value换算显示，如value为0.6时，配置的maxValue为500，则圈中数字显示为300
+* startAngle进度圆环开始绘制角度，默认为0
+* endAngle进度圆环结尾角度，默认为360
 
-
-[使用小程序开发者工具查看演示示例](https://developers.weixin.qq.com/s/BXjZSZmc7raQ)
+[使用小程序开发者工具查看演示示例](https://developers.weixin.qq.com/s/1hYQM4mE7LeS)

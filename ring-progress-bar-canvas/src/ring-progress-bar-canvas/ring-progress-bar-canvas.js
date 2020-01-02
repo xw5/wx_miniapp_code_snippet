@@ -9,7 +9,7 @@ Component({
       type: Number,
       value: 0,
       observer: function(newVal, oldValue) {
-        console.log(newVal, oldValue,this.firstEnter);
+        // console.log(newVal, oldValue,this.firstEnter);
         if (this.firstEnter === 0) {
           this.drawCircle(newVal);
         }
@@ -20,6 +20,18 @@ Component({
     size:{
       type:Number,
       value: 118
+    },
+
+    // 开始角度
+    startAngle:{
+      type:Number,
+      value: 0
+    },
+
+    // 结束角度
+     endAngle:{
+      type:Number,
+      value: 360
     },
 
     // 进度条宽度
@@ -69,8 +81,7 @@ Component({
       type: Number,
       value: 100
     },
-    
-    // 线条的结束端点样式 butt(默认) square(正方形) round(圆形)
+
     lineCap: {
       type: String,
       value: "butt"
@@ -101,7 +112,7 @@ Component({
      * @param {number} value 当前进度值
      */
     drawCircle: function(valueParam) {
-      let {progressColor, size, progressWidth, value, baseColor} = this.properties;
+      let {progressColor, size, progressWidth, value, baseColor, lineCap, startAngle, endAngle} = this.properties;
       if (!valueParam) {
         valueParam = value;
       }
@@ -117,13 +128,15 @@ Component({
         this.circleCanvas.beginPath();
         this.circleCanvas.setStrokeStyle(baseColor);
         this.circleCanvas.setLineWidth(Math.floor(progressWidth*this.drawRatio));
-        this.circleCanvas.arc(0, 0, Math.floor((size/2 - progressWidth)*this.drawRatio), 0, Math.PI * 2, false);
+        this.circleCanvas.setLineCap(lineCap);
+        this.circleCanvas.arc(0, 0, Math.floor((size/2 - progressWidth)*this.drawRatio), startAngle * Math.PI / 180 , endAngle * Math.PI / 180, false);
         this.circleCanvas.stroke();
       }
       this.circleCanvas.beginPath();
       this.circleCanvas.setStrokeStyle(progressColor);
       this.circleCanvas.setLineWidth(Math.floor(progressWidth*this.drawRatio));
-      this.circleCanvas.arc(0, 0, Math.floor((size/2 - progressWidth)*this.drawRatio), 0, Math.PI * 2 * valueParam, false);
+      this.circleCanvas.setLineCap(lineCap);
+      this.circleCanvas.arc(0, 0, Math.floor((size/2 - progressWidth)*this.drawRatio), startAngle * Math.PI / 180, (startAngle+(endAngle - startAngle)*valueParam)*Math.PI / 180, false);
       this.circleCanvas.stroke();
       this.circleCanvas.restore()
       this.circleCanvas.draw();
