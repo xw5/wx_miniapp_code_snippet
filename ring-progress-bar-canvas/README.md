@@ -47,4 +47,4 @@
 * startAngle进度圆环开始绘制角度，默认为0
 * endAngle进度圆环结尾角度，默认为360
 
-[使用小程序开发者工具查看演示示例](https://developers.weixin.qq.com/s/1hYQM4mE7LeS)
+[使用小程序开发者工具查看演示示例](https://developers.weixin.qq.com/s/YLj1wemJ7ueK)
