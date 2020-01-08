@@ -87,8 +87,12 @@ Component({
       value: "butt"
     }
   },
+  data: {
+    progressImg: ""
+  },
   drawRatio: 1,
   firstEnter: 1,
+  createProgressImgTimer: null,
 
   lifetimes:{
     attached: function() {
@@ -113,6 +117,10 @@ Component({
      */
     drawCircle: function(valueParam) {
       let {progressColor, size, progressWidth, value, baseColor, lineCap, startAngle, endAngle} = this.properties;
+      this.setData({
+        progressImg: ""
+      });
+      clearTimeout(this.createProgressImgTimer);
       if (!valueParam) {
         valueParam = value;
       }
@@ -132,14 +140,48 @@ Component({
         this.circleCanvas.arc(0, 0, Math.floor((size/2 - progressWidth)*this.drawRatio), startAngle * Math.PI / 180 , endAngle * Math.PI / 180, false);
         this.circleCanvas.stroke();
       }
-      this.circleCanvas.beginPath();
-      this.circleCanvas.setStrokeStyle(progressColor);
-      this.circleCanvas.setLineWidth(Math.floor(progressWidth*this.drawRatio));
-      this.circleCanvas.setLineCap(lineCap);
-      this.circleCanvas.arc(0, 0, Math.floor((size/2 - progressWidth)*this.drawRatio), startAngle * Math.PI / 180, (startAngle+(endAngle - startAngle)*valueParam)*Math.PI / 180, false);
-      this.circleCanvas.stroke();
+      if(valueParam > 0) {
+        this.circleCanvas.beginPath();
+        this.circleCanvas.setStrokeStyle(progressColor);
+        this.circleCanvas.setLineWidth(Math.floor(progressWidth*this.drawRatio));
+        this.circleCanvas.setLineCap(lineCap);
+        this.circleCanvas.arc(0, 0, Math.floor((size/2 - progressWidth)*this.drawRatio), startAngle * Math.PI / 180, (startAngle+(endAngle - startAngle)*valueParam)*Math.PI / 180, false);
+        this.circleCanvas.stroke();
+      }
       this.circleCanvas.restore()
-      this.circleCanvas.draw();
+      this.circleCanvas.draw(true,() => {
+        this.createProgressImgTimer = setTimeout(() => {
+          this.getProgressImg();
+        },1500);
+      });
+    },
+    /**
+     * 获取canvas画布内容
+     */
+    getProgressImg() {
+      var self = this;
+      let {size} = this.properties;
+      wx.canvasToTempFilePath({
+        x: 0,
+        y: 0,
+        quality:1,
+        width: size * self.drawRatio,
+        height: size * self.drawRatio,
+        destWidth: size,
+        destHeight: size,
+        canvasId: "circleCanvas",
+        success: function(res) {
+          console.log("canvasToTempFilePath:", res.tempFilePath);
+          if (res.tempFilePath) {
+            self.setData({
+              progressImg: res.tempFilePath
+            })
+          }
+        },
+        fail: function(err) {
+          console.log("canvasToTempFilePath:", err);
+        }
+      }, this);
     }
   }
 })
