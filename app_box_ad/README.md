@@ -4,7 +4,7 @@
 
 1. 首先需在需要使用的页面引入代码段
 ```js
-import AppBoxAd from "appBoxAd代码段位置";
+import AppBoxAd from "app_box_ad代码段位置";
 ```
 2. 在需要使用的页面执行初始化，再通过按钮调用展示即可。
 

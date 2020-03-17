@@ -14,6 +14,7 @@
 11. create_rewarded_video_ad 这是小程序**激励视频接入**的代码段，解决首次加载状态失败生close多次调用问题
 12. common_ad 这是小程序**banner/card(qq)广告**的通用代码段，更方便使用广告组件
 13. appBoxAd 这是qq小程序的盒子广告代码段，更方便在qq小程序接入盒子广告
+14. interstitial_ad 这是小程序的插屏广告代码段，更方便在小程序接入插屏广告
 
 **持续更新中...**
 
